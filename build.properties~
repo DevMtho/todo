@@ -1,0 +1,6 @@
+
+# defined the database driver
+propel.database = mysql
+
+# define the project name
+propel.project = todo

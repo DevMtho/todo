@@ -1,0 +1,55 @@
+
+<database name="eventsdb" defaultIdMethod="native">
+
+    <!-- table definitions go here -->
+    <table name="events" phpName="Events">
+        <column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+        <column name="event_name" type="varchar" size="255" required="true"/>
+        <column name="description" type="varchar" size="255" required="true"/>
+        <column name="created_at" type="TIMESTAMP" required="true"/>
+        <column name="venue_id" type="integer" required="true"/>
+        <column name="sponsor_id" type="integer" required="true"/>
+        <column name="drink_id" type="integer" required="true"/>
+        <column name="creator_id" type="integer" required="true"/>
+        <!-- Foreign key definitions come here, Original tables are below so I know these-->
+        <foreign-key foreignTable="venues" phpName="Venues" refPhpName="Events">
+            <reference local="venue_id" foreign="id"/>
+        </foreign-key>
+
+        <foreign-key foreignTable="sponsors" phpName="Sponsors" refPhpName="Events">
+            <reference local="sponsor_id" foreign="id"/>
+        </foreign-key>
+
+        <foreign-key foreignTable="drinks" phpName="Drinks" refPhpName="Events">
+            <reference local="drink_id" foreign="id"/>
+        </foreign-key>
+
+        <foreign-key foreignTable="creators" phpName="Creators" refPhpName="Events">
+            <reference local="creator_id" foreign="id"/>
+        </foreign-key>
+    </table>
+
+    <table name="creators" phpName="Creators">
+        <column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+        <column name="name" type="varchar" size="255" required="true"/>
+        <column name="cell_number" type="integer" size="11" required="true"/>
+    </table>
+
+    <table name="sponsors" phpName="Sponsors">
+        <column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+        <column name="sponsor_name" type="varchar" size="255" required="true"/>
+    </table>
+
+    <table name="venues" phpName="Venues">
+        <column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+        <column name="venue_name" type="varchar" size="255" required="true"/>
+        <column name="city" type="varchar" size="255" required="true"/>
+    </table>
+
+    <table name="drinks" phpName="Drinks">
+        <column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+        <column name="drink_name" type="varchar" size="255" required="true"/>
+        <column name="drink_type" type="varchar" size="255" required="true"/>
+    </table>
+
+</database>
