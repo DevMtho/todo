@@ -5,7 +5,7 @@
 
 
 <div class="container-fluid">
-    <section class="col .col-xs-12 .col-sm-6 .col-md-8 col-lg-6">
+    <section class="col .col-xs-12 .col-sm-6 .col-md-8 col-lg-6 white">
         <h3 class="text-primary">Create new event </h3><hr>
         <form action="" method="post">
             <div class="form-group">
