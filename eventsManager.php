@@ -25,10 +25,10 @@
                     <td> <div>Casino</div> </td>
                     <td> <div>Jozi</div> </td>
                     <td>Nicole</td>
-                    <td>Caviar</td>
+                    <td>Castle</td>
                     <td>GTC</td>
                     <td>Year End Party of 2016</td>
-                    <td style="width: 5%; "><button><i class="btn-danger fa fa-times"></i></button></td>
+                    <td><div align="center"><span class="glyphicon glyphicon-trash"></span></div></td>
                 </tr>
                 </tbody>
             </table>
